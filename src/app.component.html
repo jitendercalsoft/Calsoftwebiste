@@ -1,0 +1,228 @@
+
+<div class="min-h-screen flex flex-col bg-white">
+  
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <span class="font-bold text-xl tracking-tight text-slate-900">Calsoft<span class="text-indigo-600">CRM</span></span>
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <button (click)="scrollTo('features')" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Features</button>
+          <button (click)="scrollTo('demo')" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Interactive Demo</button>
+          <button class="bg-indigo-600 text-white px-5 py-2 rounded-full font-medium hover:bg-indigo-700 transition-colors shadow-lg shadow-indigo-200">Get Started</button>
+        </div>
+
+        <div class="md:hidden">
+          <button (click)="toggleMobileMenu()" class="text-slate-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    @if (mobileMenuOpen()) {
+      <div class="md:hidden bg-white border-b border-slate-100 p-4 space-y-4">
+        <button (click)="scrollTo('features')" class="block w-full text-left px-4 py-2 text-slate-600 hover:bg-slate-50 rounded-lg">Features</button>
+        <button (click)="scrollTo('demo')" class="block w-full text-left px-4 py-2 text-slate-600 hover:bg-slate-50 rounded-lg">Interactive Demo</button>
+        <button class="block w-full text-left px-4 py-2 text-indigo-600 font-semibold">Get Started</button>
+      </div>
+    }
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-100 rounded-full blur-3xl opacity-30 translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-100 rounded-full blur-3xl opacity-30 -translate-x-1/2 translate-y-1/2"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-medium mb-8">
+        <span class="flex h-2 w-2 rounded-full bg-indigo-600"></span>
+        Now with Gemini AI Integration
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
+        Stop Managing Spreadsheets.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-blue-500">Start Closing Deals.</span>
+      </h1>
+      <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Calsoft CRM gives you a bird’s-eye view of your sales landscape. 
+        Automate follow-ups, predict revenue with weighted forecasting, and let AI guide your next move.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button (click)="scrollTo('demo')" class="px-8 py-4 bg-indigo-600 text-white rounded-full font-bold text-lg hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200 hover:shadow-2xl hover:-translate-y-0.5 flex items-center justify-center gap-2">
+          Try Live Demo
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <button class="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-bold text-lg hover:bg-slate-50 transition-colors flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          Download Whitepaper
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Demo Section -->
+  <section id="demo" class="py-20 bg-slate-50 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">Experience the Visual Pipeline</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Drag and drop deals to see weighted forecasting in action. 
+          Click "AI Insight" on any deal to ask Gemini for closing strategies.
+        </p>
+      </div>
+      
+      <!-- The actual app demo container -->
+      <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 p-2 md:p-4 h-[600px] overflow-hidden relative">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+        <app-kanban-board></app-kanban-board>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Everything you need to scale</h2>
+        <p class="text-xl text-slate-500">Powerful features designed for modern sales teams.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Feature 1 -->
+        <app-feature-card 
+          title="Visual Deals Pipeline" 
+          description="A clear, Kanban-style view of your entire sales landscape. Identify rotting deals instantly."
+          [highlights]="['Drag & Drop Interface', 'Rotting Deal Indicators', 'Weighted Forecasting']">
+          <div icon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 7v7"/><path d="M16 7v7"/><path d="M12 7v7"/></svg>
+          </div>
+        </app-feature-card>
+
+        <!-- Feature 2 -->
+        <app-feature-card 
+          title="Automated Follow-Up" 
+          description="The system acts as a digital assistant. Smart reminders ensure no lead falls through the cracks."
+          [highlights]="['Smart Task Generation', 'Speed-to-Lead Triggers', 'Long-tail Drip Nurturing']">
+          <div icon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/><path d="m15 5 3 3"/></svg>
+          </div>
+        </app-feature-card>
+
+        <!-- Feature 3 -->
+        <app-feature-card 
+          title="Sales Sequencing" 
+          description="Standardize your winning formula. Omnichannel cadences that stop automatically when a lead replies."
+          [highlights]="['Email, WhatsApp & Call Steps', 'Auto-Stop on Reply', 'Repeatable Workflows']">
+          <div icon>
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+        </app-feature-card>
+
+        <!-- Feature 4 -->
+        <app-feature-card 
+          title="Real-Time Reports" 
+          description="Gain total visibility with executive dashboards. Spot bottlenecks and optimize your sales process."
+          [highlights]="['Conversion Rate Tracking', 'Bottleneck Analysis', 'Rep Performance Metrics']">
+          <div icon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          </div>
+        </app-feature-card>
+
+        <!-- Feature 5 -->
+        <app-feature-card 
+          title="WhatsApp Integration" 
+          description="Centralize chats in a shared inbox. Send payment links and capture leads directly from social media."
+          [highlights]="['Official Business API', 'In-Chat Payments', 'Social Auto-Capture']">
+          <div icon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          </div>
+        </app-feature-card>
+
+        <!-- Feature 6 (Bonus AI) -->
+        <app-feature-card 
+          title="Gemini AI Intelligence" 
+          description="Integrated AI that analyzes deal health, suggests closing tactics, and writes emails for you."
+          [highlights]="['Deal Health Scoring', 'Smart Reply Suggestions', 'Coaching Insights']">
+          <div icon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+          </div>
+        </app-feature-card>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-indigo-900 text-white relative overflow-hidden">
+     <div class="absolute inset-0 opacity-10">
+        <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+           <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
+        </svg>
+     </div>
+    <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold mb-8">Ready to transform your sales process?</h2>
+      <p class="text-indigo-200 text-lg mb-10 max-w-2xl mx-auto">Join thousands of sales teams who are closing more deals with less effort using Calsoft CRM.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="px-8 py-4 bg-white text-indigo-900 rounded-full font-bold text-lg hover:bg-indigo-50 transition-colors">Start Free Trial</button>
+        <button class="px-8 py-4 bg-transparent border border-white/30 text-white rounded-full font-bold text-lg hover:bg-white/10 transition-colors">Schedule Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          <span class="font-bold text-xl">Calsoft CRM</span>
+        </div>
+        <p class="text-sm">The modern CRM for high-growth sales teams.</p>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-semibold mb-4">Product</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">Features</a></li>
+          <li><a href="#" class="hover:text-white">Integrations</a></li>
+          <li><a href="#" class="hover:text-white">Pricing</a></li>
+          <li><a href="#" class="hover:text-white">API</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-4">Resources</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Community</a></li>
+          <li><a href="#" class="hover:text-white">Help Center</a></li>
+          <li><a href="#" class="hover:text-white">Status</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Legal</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-slate-800 text-center text-xs">
+      &copy; 2024 Calsoft CRM. All rights reserved.
+    </div>
+  </footer>
+
+</div>
