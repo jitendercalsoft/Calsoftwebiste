@@ -1,3 +1,4 @@
+
 import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -35,12 +36,12 @@ interface FaqItem {
           </div>
           
           <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-[1.1]">
-            Grow better with the <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c35] to-orange-500">AI Customer Platform.</span>
+            Scale Revenue with the <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c35] to-orange-500">Automated Sales Platform.</span>
           </h1>
           
           <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-            Calsoft CRM connects your marketing, sales, and service data on a single platform. Democratizing enterprise-grade tools for the SME market.
+            A unified CRM to visualize your pipeline, automate follow-ups, and close more deals. Built for teams who need enterprise power without the complexity.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4">

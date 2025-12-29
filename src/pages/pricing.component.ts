@@ -1,3 +1,4 @@
+
 import { Component, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -77,18 +78,34 @@ interface Category {
                 </div>
 
                 <!-- Basic Plan -->
-                <div class="p-8 text-center relative hover:bg-white transition-colors group">
+                <div class="p-8 text-center relative hover:bg-white transition-colors group flex flex-col h-full">
                     <h3 class="text-lg font-bold text-slate-900">Basic</h3>
                     <div class="mt-4 flex items-baseline justify-center text-slate-900">
                         <span class="text-4xl font-extrabold tracking-tight">{{ currentPrices().basic }}</span>
                         <span class="ml-1 text-sm font-medium text-slate-500">/user/mo</span>
                     </div>
                     <p class="mt-2 text-xs text-slate-400 font-medium uppercase tracking-wide">billed {{ billing() }}</p>
-                    <button class="mt-6 w-full bg-white border border-slate-300 text-slate-700 hover:border-slate-400 hover:text-slate-900 font-bold py-3 px-4 rounded-xl transition-all shadow-sm">Get Started</button>
+
+                    <ul class="my-6 space-y-3 text-sm text-slate-600 text-left">
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Up to 5 Users
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           1 Sales Pipeline
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Web Lead Capture
+                        </li>
+                    </ul>
+                    
+                    <button class="mt-auto w-full bg-white border border-slate-300 text-slate-700 hover:border-slate-400 hover:text-slate-900 font-bold py-3 px-4 rounded-xl transition-all shadow-sm">Get Started</button>
                 </div>
 
                 <!-- Pro Plan -->
-                <div class="p-8 text-center relative bg-indigo-50/40 hover:bg-indigo-50/80 transition-colors border-t-4 border-indigo-600 md:border-t-0 md:border-t-transparent shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)]">
+                <div class="p-8 text-center relative bg-indigo-50/40 hover:bg-indigo-50/80 transition-colors border-t-4 border-indigo-600 md:border-t-0 md:border-t-transparent shadow-[inset_0_2px_10px_rgba(0,0,0,0.02)] flex flex-col h-full">
                     <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-4 py-1 rounded-full text-[11px] font-bold tracking-widest uppercase shadow-lg ring-4 ring-white">
                         Most Popular
                     </div>
@@ -98,18 +115,58 @@ interface Category {
                         <span class="ml-1 text-sm font-medium text-indigo-600">/user/mo</span>
                     </div>
                     <p class="mt-2 text-xs text-indigo-400 font-medium uppercase tracking-wide">billed {{ billing() }}</p>
-                    <button class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:-translate-y-0.5">Start Free Trial</button>
+
+                    <ul class="my-6 space-y-3 text-sm text-slate-700 text-left">
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Up to 25 Users
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           WhatsApp & Email Automation
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Smart Lead Routing
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           5 Pipelines
+                        </li>
+                    </ul>
+
+                    <button class="mt-auto w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg shadow-indigo-200 hover:shadow-indigo-300 hover:-translate-y-0.5">Start Free Trial</button>
                 </div>
 
                 <!-- Advanced Plan -->
-                <div class="p-8 text-center relative hover:bg-white transition-colors">
+                <div class="p-8 text-center relative hover:bg-white transition-colors flex flex-col h-full">
                     <h3 class="text-lg font-bold text-slate-900">Enterprise</h3>
                     <div class="mt-4 flex items-baseline justify-center text-slate-900">
                         <span class="text-4xl font-extrabold tracking-tight">{{ currentPrices().advanced }}</span>
                         <span class="ml-1 text-sm font-medium text-slate-500">/user/mo</span>
                     </div>
                     <p class="mt-2 text-xs text-slate-400 font-medium uppercase tracking-wide">billed {{ billing() }}</p>
-                    <button class="mt-6 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-xl">Contact Sales</button>
+
+                    <ul class="my-6 space-y-3 text-sm text-slate-600 text-left">
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           100+ Users
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Full API Access & Webhooks
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Auto Dialer + IVR
+                        </li>
+                        <li class="flex items-start gap-2">
+                           <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                           Unlimited Pipelines
+                        </li>
+                    </ul>
+
+                    <button class="mt-auto w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-lg hover:shadow-xl">Contact Sales</button>
                 </div>
             </div>
 

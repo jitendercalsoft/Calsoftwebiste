@@ -43,7 +43,7 @@ import { FormsModule } from '@angular/forms';
               </div>
               <div>
                 <label class="flex items-center gap-2 text-sm font-medium text-slate-700 mb-1">
-                  <span class="text-slate-500 material-symbols-outlined text-[18px]">newspaper</span> Old School / Events
+                  <span class="text-slate-500 material-symbols-outlined text-[18px]">newspaper</span> Google Ads & Events
                 </label>
                 <div class="relative">
                   <span class="absolute left-3 top-2.5 text-slate-400">₹</span>
@@ -76,7 +76,7 @@ import { FormsModule } from '@angular/forms';
               </div>
               <div class="pt-2 border-t border-slate-100">
                 <label class="text-sm font-medium text-slate-700 mb-2 block flex justify-between items-center">
-                  <span>Deals Closed / Month</span>
+                  <span>No. of Deals Closed</span>
                   <div class="relative tooltip-trigger cursor-help group">
                     <span class="text-xs text-indigo-600 bg-indigo-50 px-2 py-1 rounded border border-indigo-100">
                       Implied Rate: {{ currentImpliedRate() | number:'1.1-1' }}%

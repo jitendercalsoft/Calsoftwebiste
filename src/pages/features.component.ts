@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -31,7 +32,7 @@ import { RouterLink } from '@angular/router';
                 Stop managing your sales process in messy spreadsheets. Calsoft CRM provides a crystal-clear, <strong>Kanban-style board</strong> that visualizes every active deal in real-time. Move opportunities through stages with a simple drag-and-drop interface.
               </p>
               <p>
-                Our <strong>AI-driven "Rotting Deal" indicators</strong> automatically flag opportunities that have gone stagnant, prompting your team to re-engage before it's too late. Combined with <strong>weighted forecasting</strong>, you'll have a surgical prediction of your monthly revenue based on actual stage probabilities, not gut feelings.
+                Our <strong>intelligent "Rotting Deal" indicators</strong> automatically flag opportunities that have gone stagnant, prompting your team to re-engage before it's too late. Combined with <strong>weighted forecasting</strong>, you'll have a surgical prediction of your monthly revenue based on actual stage probabilities, not gut feelings.
               </p>
             </div>
             <ul class="space-y-4">
