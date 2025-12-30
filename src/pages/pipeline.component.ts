@@ -1,3 +1,4 @@
+
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KanbanBoardComponent } from '../components/kanban-board.component';
@@ -12,26 +13,87 @@ interface FaqItem {
   imports: [CommonModule, KanbanBoardComponent],
   template: `
     <div class="pt-10 pb-12 px-4 max-w-7xl mx-auto">
-      <div class="mb-8 text-center max-w-3xl mx-auto">
-        <h1 class="text-3xl font-bold text-slate-900 mb-4">Visual Pipeline & Forecasting</h1>
-        <p class="text-slate-600 text-lg mb-6">
+      <div class="mb-12 text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold text-slate-900 mb-6">Sales Pipeline</h1>
+        <p class="text-slate-600 text-lg mb-8">
           See your success before it happens. Gain a "bird’s-eye view" of your entire sales landscape, manage deals with drag-and-drop simplicity, and prioritize your revenue.
         </p>
+      </div>
 
-        <!-- Demo Instructions -->
-        <div class="bg-indigo-50 text-indigo-900 p-4 rounded-lg text-sm text-left max-w-2xl mx-auto border border-indigo-100 shadow-sm">
-          <p class="font-bold mb-2 flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="16" y2="12"/><line x1="12" x2="12.01" y1="8" y2="8"/></svg>
-            Interactive Demo Guide:
-          </p>
-          <ul class="list-disc pl-5 space-y-1">
-            <li><strong>Drag & Drop:</strong> Move cards between columns. Notice the <em>Weighted Forecast</em> at the top updates automatically based on the stage probability.</li>
-            <li><strong>Rotting Deals:</strong> Look for the <span class="w-2 h-2 rounded-full bg-red-500 inline-block align-middle"></span> red dot. This alerts you to deals inactive for > 7 days.</li>
-          </ul>
+      <!-- WHY YOU NEED A PIPELINE (Moved to Top) -->
+      <div class="mb-16">
+        <div class="bg-indigo-900 rounded-3xl p-8 md:p-12 text-white overflow-hidden relative">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-3xl font-bold mb-6 text-center">Why Your Business Needs a Sales Pipeline</h2>
+                <p class="text-center text-indigo-100 max-w-3xl mx-auto mb-12 text-lg leading-relaxed">
+                    A sales pipeline isn't just a tracking tool—it's the visual roadmap of your revenue engine. It transforms a chaotic list of leads into a structured process that drives growth.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Benefit 1 -->
+                    <div class="bg-indigo-800/50 p-6 rounded-xl border border-indigo-700/50 backdrop-blur-sm hover:bg-indigo-800 transition-colors">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">map</span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">A Clear Roadmap</h3>
+                        <p class="text-sm text-indigo-200 leading-relaxed">
+                            Standardize your sales process. Every rep knows exactly what steps to take next, reducing confusion and ensuring a consistent customer experience.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="bg-indigo-800/50 p-6 rounded-xl border border-indigo-700/50 backdrop-blur-sm hover:bg-indigo-800 transition-colors">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">trending_up</span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Accurate Forecasting</h3>
+                        <p class="text-sm text-indigo-200 leading-relaxed">
+                            Knowing deal stages and closing probabilities lets you predict future revenue with precision rather than guesswork.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="bg-indigo-800/50 p-6 rounded-xl border border-indigo-700/50 backdrop-blur-sm hover:bg-indigo-800 transition-colors">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">speed</span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Faster Sales Cycles</h3>
+                        <p class="text-sm text-indigo-200 leading-relaxed">
+                            Visualizing the pipeline highlights bottlenecks. Identify where deals stall and optimize your process to unblock revenue.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 4 -->
+                    <div class="bg-indigo-800/50 p-6 rounded-xl border border-indigo-700/50 backdrop-blur-sm hover:bg-indigo-800 transition-colors">
+                        <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">person_check</span>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">Resource Allocation</h3>
+                        <p class="text-sm text-indigo-200 leading-relaxed">
+                            Focus on the right deals. Reps can prioritize high-value opportunities that are moving forward, optimizing their time.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-2 md:p-4 h-[700px] overflow-hidden flex flex-col relative mb-12">
+      <!-- Demo Instructions -->
+      <div class="bg-indigo-50 text-indigo-900 p-4 rounded-lg text-sm text-left max-w-2xl mx-auto border border-indigo-100 shadow-sm mb-6">
+        <p class="font-bold mb-2 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="16" y2="12"/><line x1="12" x2="12.01" y1="8" y2="8"/></svg>
+          Interactive Demo Guide:
+        </p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li><strong>Drag & Drop:</strong> Move cards between columns. Notice the <em>Weighted Forecast</em> at the top updates automatically based on the stage probability.</li>
+          <li><strong>Rotting Deals:</strong> Look for the <span class="w-2 h-2 rounded-full bg-red-500 inline-block align-middle"></span> red dot. This alerts you to deals inactive for > 7 days.</li>
+        </ul>
+      </div>
+
+      <!-- Kanban Board Visual -->
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-2 md:p-4 h-[700px] overflow-hidden flex flex-col relative mb-16">
         <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
         <div class="flex-1 overflow-hidden">
            <app-kanban-board></app-kanban-board>

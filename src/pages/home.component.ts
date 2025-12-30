@@ -1,3 +1,4 @@
+
 import { Component, OnInit, OnDestroy, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -31,16 +32,16 @@ interface FaqItem {
         <div class="max-w-2xl relative z-10">
            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-[#ff5c35] text-xs font-bold uppercase tracking-wide mb-6">
             <span class="w-2 h-2 rounded-full bg-[#ff5c35] animate-pulse"></span>
-            #1 CRM for High-Growth SMBs
+            #1 CRM for Growth
           </div>
           
           <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-[1.1]">
-            Turn Every Lead into a Deal <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c35] to-orange-500">Faster and Smarter.</span>
+            From Startup Hustle to <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c35] to-orange-500">Mid-Market Muscle.</span>
           </h1>
           
           <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-            Calsoft CRM is an easy-to-use, no-code CRM that streamlines sales workflows, automates follow-ups, and helps teams close more deals with less effort.
+            Stop juggling spreadsheets and clunky enterprise tools. Calsoft CRM gives <strong>Startups</strong> speed, <strong>SMBs</strong> structure, and <strong>Mid-Market</strong> teams the power to dominate—all in one platform.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4">
@@ -274,57 +275,48 @@ interface FaqItem {
     </div>
   </section>
 
-  <!-- Built for Teams Section -->
+  <!-- Built for Teams Section (Updated for Startups/SMB/Mid-Market) -->
   <section class="py-20 bg-slate-50 border-y border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16 max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Built for Teams That Sell Every Day</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Designed for Every Stage of Growth</h2>
         <p class="text-xl text-slate-500">
-          Calsoft CRM is designed for sales-driven organizations that need clarity, speed, and control—without complex setup or coding.
+          From your first deal to your IPO, Calsoft CRM adapts to your needs.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
-          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined">rocket_launch</span></div>
-          <div>
-            <h3 class="font-bold text-slate-900">Startups & Growing Businesses</h3>
-            <p class="text-sm text-slate-600 mt-1">Flexible tools that scale from your first hire to your hundredth.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Startups -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+          <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-6">
+             <span class="material-symbols-outlined text-3xl">rocket_launch</span>
           </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Startups</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+             <strong>Move Fast.</strong> Get set up in minutes, not months. Capture every early lead and close deals without the overhead of complex enterprise software.
+          </p>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
-          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined">groups</span></div>
-          <div>
-            <h3 class="font-bold text-slate-900">B2B & B2C Sales Teams</h3>
-            <p class="text-sm text-slate-600 mt-1">Manage complex deal cycles or high-volume transactional sales.</p>
+
+        <!-- SMBs -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-[#ff5c35] text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
+          <div class="w-14 h-14 bg-orange-100 text-[#ff5c35] rounded-full flex items-center justify-center mb-6">
+             <span class="material-symbols-outlined text-3xl">storefront</span>
           </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">SMBs</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+             <strong>Build Structure.</strong> Standardize your sales process. Use automated follow-ups and pipelines to turn a chaotic sales floor into a predictable revenue machine.
+          </p>
         </div>
-        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
-          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined">headset_mic</span></div>
-          <div>
-            <h3 class="font-bold text-slate-900">Inside Sales & Telecalling</h3>
-            <p class="text-sm text-slate-600 mt-1">Integrated dialers and automated call logging for high-velocity teams.</p>
+
+        <!-- Mid-Market -->
+        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col items-center text-center">
+          <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mb-6">
+             <span class="material-symbols-outlined text-3xl">domain</span>
           </div>
-        </div>
-        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
-          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined">design_services</span></div>
-          <div>
-            <h3 class="font-bold text-slate-900">Service & Consulting</h3>
-            <p class="text-sm text-slate-600 mt-1">Track client projects from proposal to payment in one unified pipeline.</p>
-          </div>
-        </div>
-         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
-          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined">school</span></div>
-          <div>
-            <h3 class="font-bold text-slate-900">Education & Real Estate</h3>
-            <p class="text-sm text-slate-600 mt-1">Manage long-term nurturing for high-value, considered purchases.</p>
-          </div>
-        </div>
-         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
-          <div class="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center shrink-0"><span class="material-symbols-outlined">cloud</span></div>
-          <div>
-            <h3 class="font-bold text-slate-900">SaaS Businesses</h3>
-            <p class="text-sm text-slate-600 mt-1">Track trial signups, product demos, and subscription renewals.</p>
-          </div>
+          <h3 class="font-bold text-xl text-slate-900 mb-3">Mid-Market</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+             <strong>Scale Power.</strong> Advanced reporting, role-based security, and custom integrations give you the control of a legacy CRM with the agility of a modern platform.
+          </p>
         </div>
       </div>
     </div>
