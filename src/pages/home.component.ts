@@ -32,16 +32,16 @@ interface FaqItem {
         <div class="max-w-2xl relative z-10">
            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-100 text-[#ff5c35] text-xs font-bold uppercase tracking-wide mb-6">
             <span class="w-2 h-2 rounded-full bg-[#ff5c35] animate-pulse"></span>
-            #1 CRM for Growth
+            #1 Execution-First CRM
           </div>
           
           <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-[1.1]">
-            From Startup Hustle to <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c35] to-orange-500">Mid-Market Muscle.</span>
+            The Execution-First CRM. <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff5c35] to-orange-500">Start Selling in 1 Hour.</span>
           </h1>
           
           <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-            Stop juggling spreadsheets and clunky enterprise tools. Calsoft CRM gives <strong>Startups</strong> speed, <strong>SMBs</strong> structure, and <strong>Mid-Market</strong> teams the power to dominate—all in one platform.
+            Stop waiting weeks to go live. Calsoft CRM shifts your team from <strong>reactive</strong> data entry to <strong>proactive</strong> revenue generation. Automate the hustle and close deals—fast.
           </p>
           
           <div class="flex flex-col sm:flex-row gap-4">
@@ -52,7 +52,7 @@ interface FaqItem {
               Get a Demo
             </button>
           </div>
-          <p class="mt-4 text-xs text-slate-500">Free 14-day trial • No credit card required</p>
+          <p class="mt-4 text-xs text-slate-500">Free 14-day trial • No credit card required • Setup in 60 mins</p>
         </div>
 
         <!-- Right: Visual (CSS Dashboard) -->
@@ -187,8 +187,8 @@ interface FaqItem {
   <section id="features" class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Everything you need to scale</h2>
-        <p class="text-xl text-slate-500">Powerful features designed for modern sales teams.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Everything you need to execute</h2>
+        <p class="text-xl text-slate-500">Powerful features designed to make you proactive.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -219,12 +219,12 @@ interface FaqItem {
           </app-feature-card>
         </a>
 
-        <!-- Feature 2: Automated Follow-Up -->
+        <!-- Feature 2: Proactive Follow-Up -->
         <a routerLink="/follow-up" class="group block h-full">
           <app-feature-card 
             class="h-full block transition-transform duration-300 group-hover:-translate-y-2 cursor-pointer"
-            title="Automated Follow-Up" 
-            description="The system acts as a digital assistant. Smart reminders ensure no lead falls through the cracks."
+            title="Proactive Follow-Up" 
+            description="Be proactive, not reactive. The system chases leads for you with smart reminders and instant engagement triggers."
             [highlights]="['Smart Task Generation', 'Speed-to-Lead Triggers', 'Long-tail Drip Nurturing']">
             <div icon>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/><path d="m15 5 3 3"/></svg>
@@ -292,7 +292,7 @@ interface FaqItem {
           </div>
           <h3 class="font-bold text-xl text-slate-900 mb-3">Startups</h3>
           <p class="text-slate-600 text-sm leading-relaxed">
-             <strong>Move Fast.</strong> Get set up in minutes, not months. Capture every early lead and close deals without the overhead of complex enterprise software.
+             <strong>Move Fast.</strong> Get set up in <strong>1 hour</strong>, not months. Capture every early lead and close deals without the overhead of complex enterprise software.
           </p>
         </div>
 
@@ -355,8 +355,8 @@ interface FaqItem {
           <div class="w-20 h-20 bg-slate-50 border border-slate-200 rounded-full flex items-center justify-center mb-4 shadow-sm">
             <span class="text-4xl">⏰</span>
           </div>
-          <h3 class="font-bold text-slate-900 mb-2">3. Follow Up on Time</h3>
-          <p class="text-sm text-slate-600">Create follow-ups, set reminders, and stay consistent with every opportunity.</p>
+          <h3 class="font-bold text-slate-900 mb-2">3. Proactive Follow-Up</h3>
+          <p class="text-sm text-slate-600">The system creates follow-ups and sets reminders, ensuring you stay consistent.</p>
         </div>
         <!-- Step 4 -->
         <div class="flex flex-col items-center z-10">
@@ -379,7 +379,7 @@ interface FaqItem {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
         <div class="flex items-start gap-3">
           <span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
-          <p class="text-slate-700">Simple, no-code setup</p>
+          <p class="text-slate-700">Simple, no-code setup in under 1 hour</p>
         </div>
         <div class="flex items-start gap-3">
           <span class="material-symbols-outlined text-green-500 mt-1">check_circle</span>
